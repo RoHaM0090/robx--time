@@ -1,0 +1,9 @@
+import {useT} from './i18n.jsx';import {Marquee} from './components/Extras.jsx';
+export function Features(){const{t}=useT();return<><section className="px-4 max-w-5xl mx-auto mt-16 grid md:grid-cols-3 gap-4">{t('feat').map(([i,h,d])=><div key={h} className="glass p-6 lift reveal"><div className="text-3xl">{i}</div><h3 className="font-extrabold mt-3">{h}</h3><p className="lbl mt-1 leading-relaxed">{d}</p></div>)}</section><Marquee/></>}
+export function How(){const{t}=useT();return(<section className="pt-28 px-4 max-w-5xl mx-auto fade"><h1 className="text-4xl font-black text-center mb-8"><span className="big">{t('howT')}</span></h1>
+ <ol className="grid md:grid-cols-3 gap-4">{t('how').map(([n,h,d])=><li key={n} className="glass p-6 lift"><div className="big text-5xl">{n}</div><h3 className="font-extrabold mt-3">{h}</h3><p className="lbl mt-1">{d}</p></li>)}</ol>
+ <a href="#/" className="btn inline-block mt-10 mx-auto flex justify-center w-fit">{t('cta')}</a></section>)}
+export function FAQ(){const{t}=useT();return(<section className="pt-28 px-4 max-w-2xl mx-auto fade"><h1 className="text-4xl font-black text-center mb-8"><span className="big">{t('faqT')}</span></h1>
+ <div className="glass px-5 py-2">{t('faq').map(([q,a])=><details key={q} className="border-b border-white/10 last:border-0 py-1"><summary className="font-semibold">{q}</summary><p className="lbl leading-relaxed pb-3">{a}</p></details>)}</div></section>)}
+export function About(){const{t}=useT();return(<section className="pt-28 px-4 max-w-2xl mx-auto fade text-center"><h1 className="text-4xl font-black mb-8"><span className="big">{t('aboutT')}</span></h1>
+ <div className="glass p-7 grid gap-4 leading-loose">{t('about').map(x=><p key={x}>{x}</p>)}<p className="lbl">{t('igT')}</p><a className="ig mx-auto" dir="ltr" href="https://instagram.com/lil_rohi" target="_blank" rel="noopener noreferrer">@lil_rohi</a></div></section>)}
